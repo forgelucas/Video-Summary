@@ -1,4 +1,8 @@
 from django.shortcuts import render
+from . models import Video
+from django.http import HttpResponse
+from . utils import Transcricao, gerar_resumo
+
 
 # Create your views here.
 def home(request):
@@ -7,3 +11,14 @@ def home(request):
     elif request.method == "POST":
         titulo = request.POST.get('titulo')    
         video = request.FILES.get('video')
+        video_upload = Video(titulo=titulo, video=video)
+        video_upload.save()
+
+        transcricao = Transcricao(video_upload.video.path)
+        transcript = transcricao.transcrever()
+
+        video_upload.transcricao = transcript
+        video_upload.resumo = gerar_resumo(transcript)
+        video_upload.save()
+
+        return HttpResponse ('Upload realizado!')
