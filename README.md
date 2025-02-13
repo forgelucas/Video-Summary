@@ -1,4 +1,4 @@
-#🎥 Video Summary
+🎥 #Video Summary
 
 Video Summary é um software desenvolvido com Python, Django e OpenAI que permite processar vídeos de forma inteligente. O sistema realiza as seguintes etapas:
 
