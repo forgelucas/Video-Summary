@@ -6,9 +6,9 @@
 - ✅ Transcrição do áudio utilizando tecnologias avançadas de reconhecimento de voz.
 - ✅ Geração de resumo da transcrição por meio da API da OpenAI.
 - ✅ Entrega do resumo ao cliente, facilitando a compreensão rápida do conteúdo do vídeo.
-
+---
  Este projeto é ideal para quem deseja obter insights rápidos de vídeos sem precisar assistir a todo o conteúdo. 🚀
-
+---
 ## 💡 Como utilizar:
 - 1️⃣ Configure sua chave de API da OpenAI no arquivo settings.py.
 - 2️⃣ Inicie o servidor:
